@@ -28,7 +28,7 @@ object GlueHudi {
     Job.init(args("JOB_NAME"), glueContext, args.asJava)
     
     //Where to store your Hudi Table.
-    val outputBucket = "emr-hudi-data-output"
+    val outputBucket = "hudi-data-output"
     
     //inputDatasetBucket will use Amazons Public Dataset. 
     //If you wish to use the same dataset (smaller with some intential bad data), see README.md for instructions
@@ -36,7 +36,7 @@ object GlueHudi {
     val inputDatasetBucket = "s3://<<bucket-name>>/amazon-reviews/parquet/"
     
     //Specify common DataSourceWriteOptions in the single hudiOptions variable 
-    val hudiTableName = "amazon_product_reviews_glue"
+    val hudiTableName = "amazon_product_reviews_cow"
     val hudiTableRecordKey = "review_id"
     val hudiTablePath = "s3://" + outputBucket + "/" + hudiTableName
     val hudiTablePartitionColumn = "review_date"
