@@ -19,9 +19,9 @@ In your Glue ETL job, specify Dependent jars path and add the S3 paths of the ja
 
 Under Job parameters specify:
 
-Key  : --conf
+**Key  :** --conf
 
-Value: spark.serializer=org.apache.spark.serializer.KryoSerializer
+**Value:** spark.serializer=org.apache.spark.serializer.KryoSerializer
 
 Also make sure Glue Catalog is selected or pass it under job parameters:
 --enable-glue-datacatalog
